@@ -1,7 +1,6 @@
 <?php
 
 class dbNBA{
-  //-- Variables de Identificacion --\\
   private $IP="localhost";
   private $USUARIO="root";
   private $CONTRASEÑA="";
@@ -20,7 +19,6 @@ class dbNBA{
   public function getErrorConexion(){
     return $this->error;
   }
-    //-- Funcion para que INSERTAR un Equipo y MOSTRARLO --\\
   public function InsertarEquipos($nombre,$ciudad,$conferencia,$division){
     $sqlInsercion="INSERT INTO equipos(Nombre,Ciudad,Conferencia,Division) Values('".$nombre."','".$ciudad."','".$conferencia."','".$division."')";
     $this->conexion->query($sqlInsercion);
